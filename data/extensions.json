@@ -1,3 +1,5 @@
 {
-  "events": "cogs.events.events"
+  "events": "cogs.events.events",
+  "main": "cogs.commands.main",
+  "source": "cogs.commands.source"
 }
