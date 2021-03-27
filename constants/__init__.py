@@ -3,3 +3,4 @@ import constants.rpgdiceroller
 import constants.extractdomain
 import constants.alphanumeric
 import constants.excel
+import constants.camelcase

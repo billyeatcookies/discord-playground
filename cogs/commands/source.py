@@ -66,6 +66,11 @@ class Source(commands.Cog):
         await ctx.send(embed=utils.embed.source(constants.excel.title_averageif,
                                                 src.excel.averageif()))
 
+    @_src.command(name="camelcase", aliases=["camelCase", "camel_case", "to_camel_case"])
+    async def to_camel_case(self, ctx):
+        await ctx.send(embed=utils.embed.source(constants.camelcase.title_camelcase,
+                                                src.camelcase.to_camel_case()))
+
 
 def setup(bot):
     bot.add_cog(Source(bot))
