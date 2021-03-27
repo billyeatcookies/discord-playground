@@ -1,5 +1,4 @@
 import discord
-import tictactoe
 from discord.ext import commands
 
 import lib
@@ -81,6 +80,7 @@ class Main(commands.Cog):
         await ctx.send(embed=utils.embed.result(constants.camelcase.title_camelcase,
                                                 lib.camelcase.to_camel_case(string), True))
 
+    # not formatted
     @commands.command()
     async def noise2d(self, ctx, width=512, height=512):
         lib.noise.noise2d(width, height)
@@ -95,11 +95,6 @@ class Main(commands.Cog):
     async def noise4d(self, ctx, width=512, height=512):
         lib.noise.noise4d(width, height)
         await ctx.send(file=discord.File('noise4d.png'))
-
-    @commands.group(name="ttt")
-    async def ttt(self, ctx):
-        await ctx.send(tictactoe.play(tictactoe.EMPTY_BOARD, 'O', 2, 2))
-        await ctx.send("```{0}```".format(tictactoe.get_printable_board(tictactoe.EMPTY_BOARD)))
 
 
 def setup(bot):
